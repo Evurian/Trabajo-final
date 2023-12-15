@@ -3,6 +3,7 @@ class Pokemon{
     private String nombre, tipo;
     private int ataque, vida, defensa, exp;
     
+    
     public Pokemon(String nombre, String tipo, int ataque, int vida, int defensa, int exp) {
         this.nombre = nombre;
         this.tipo = tipo;

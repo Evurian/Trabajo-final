@@ -1,13 +1,13 @@
 public class Electrico extends Pokemon {
 
     public Electrico(String nombre, String tipo, int ataque, int vida, int defensa, int exp){
-        super("","Electrico", ataque,vida,defensa,0);
+        super(nombre,"Electrico", ataque,vida,defensa,0);
     }
 }
 
 class Pichu extends Electrico {
 
-    public Pichu(String nombre, int ataque, int vida, int defensa, int exp) {
+    public Pichu(int ataque, int vida, int defensa) {
         super("Pichu", "Electrico", ataque, vida, defensa, 0);
     }
 }
