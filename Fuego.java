@@ -1,3 +1,4 @@
+import javax.swing.*;
 public class Fuego extends Pokemon {
 
     public Fuego(String nombre, String tipo, int ataque, int vida, int defensa, int exp){
@@ -6,13 +7,21 @@ public class Fuego extends Pokemon {
 }
 
 class Charmander extends Fuego {
-
+    private ImageIcon imagen = new ImageIcon(getClass().getResource("Charmander.png"));
     public Charmander(int ataque, int vida, int defensa) {
         super("Charmander", "Fuego", ataque, vida, defensa, 0);
     }
+    public ImageIcon getImage(){
+        return imagen;
+    }
 }
 class Chimchar extends Fuego{
+    private ImageIcon imagen = new ImageIcon(getClass().getResource("chimchar.png"));
+
     public Chimchar(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Chimchar", "Fuego", ataque, vida, defensa, 0);
+    }
+    public ImageIcon getImage(){
+        return imagen;
     }
 }
