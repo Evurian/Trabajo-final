@@ -11,8 +11,8 @@ class Charmander extends Fuego {
     public Charmander(int ataque, int vida, int defensa) {
         super("Charmander", "Fuego", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }
 class Chimchar extends Fuego{
@@ -21,7 +21,7 @@ class Chimchar extends Fuego{
     public Chimchar(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Chimchar", "Fuego", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }

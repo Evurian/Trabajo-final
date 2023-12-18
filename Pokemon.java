@@ -4,6 +4,7 @@ class Pokemon{
     private String nombre, tipo;
     private int ataque, vida, defensa, exp;
     private ImageIcon imagen;
+    private int fila, columna;
     
     
     public Pokemon(String nombre, String tipo, int ataque, int vida, int defensa, int exp) {
@@ -50,5 +51,19 @@ class Pokemon{
     public int getDefensa() {
         return defensa;
     }
-
+    public void setFila(int n){
+        fila = n;
+    }
+    public int getFila(){
+        return fila;
+    }
+    public void setColumna(int n){
+        columna = n;
+    }
+    public int getColumna(){
+        return columna;
+    }
+    public ImageIcon getImagen(){
+        return imagen;
+    }
 }

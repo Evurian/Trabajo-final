@@ -11,8 +11,8 @@ class Squirtle extends Agua {
     public Squirtle(int ataque, int vida, int defensa) {
         super("Squirtle", "Agua", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }
 class Froakie extends Agua{
@@ -20,7 +20,7 @@ class Froakie extends Agua{
     public Froakie(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Froakie", "Agua", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }

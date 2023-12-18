@@ -21,7 +21,7 @@ class Snivy extends Planta{
     public Snivy(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Snivy", "Planta", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }

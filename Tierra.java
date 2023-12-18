@@ -1,3 +1,5 @@
+import java.awt.Image;
+
 import javax.swing.ImageIcon;
 
 public class Tierra extends Pokemon {
@@ -12,8 +14,8 @@ class Geodude extends Tierra {
     public Geodude(int ataque, int vida, int defensa) {
         super("Geodude", "Tierra", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }
 class Rhyhorn extends Tierra{
@@ -21,7 +23,7 @@ class Rhyhorn extends Tierra{
     public Rhyhorn(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Rhyhorn", "Tierra", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }

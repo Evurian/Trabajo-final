@@ -11,8 +11,8 @@ class Pichu extends Electrico {
     public Pichu(int ataque, int vida, int defensa) {
         super("Pichu", "Electrico", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }
 class Elekid extends Electrico{
@@ -20,7 +20,7 @@ class Elekid extends Electrico{
     public Elekid(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Elekid", "Electrico", ataque, vida, defensa, 0);
     }
-    public ImageIcon getImage(){
-        return imagen;
+    public void setImage(ImageIcon imagen){
+        this.imagen = imagen;
     }
 }
