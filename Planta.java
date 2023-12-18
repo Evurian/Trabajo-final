@@ -8,7 +8,7 @@ public class Planta extends Pokemon {
 }
 
 class Bulbasaur extends Planta {
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("B.png"));
+    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/B.png"));
     public Bulbasaur(int ataque, int vida, int defensa) {
         super("Bulbasaur", "Planta", ataque, vida, defensa, 0);
     }
@@ -17,7 +17,7 @@ class Bulbasaur extends Planta {
     }
 }
 class Snivy extends Planta{
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("snivy.png"));
+    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/snivy.png"));
     public Snivy(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Snivy", "Planta", ataque, vida, defensa, 0);
     }

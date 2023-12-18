@@ -8,7 +8,7 @@ public class Tierra extends Pokemon {
 }
 
 class Geodude extends Tierra {
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("geodude.png"));
+    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/geodude.png"));
     public Geodude(int ataque, int vida, int defensa) {
         super("Geodude", "Tierra", ataque, vida, defensa, 0);
     }
@@ -17,7 +17,7 @@ class Geodude extends Tierra {
     }
 }
 class Rhyhorn extends Tierra{
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("rhyhorn.png"));
+    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/rhyhorn.png"));
     public Rhyhorn(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Rhyhorn", "Tierra", ataque, vida, defensa, 0);
     }

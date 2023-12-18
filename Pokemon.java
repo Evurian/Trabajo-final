@@ -1,7 +1,9 @@
+import javax.swing.ImageIcon;
 
 class Pokemon{
     private String nombre, tipo;
     private int ataque, vida, defensa, exp;
+    private ImageIcon imagen;
     
     
     public Pokemon(String nombre, String tipo, int ataque, int vida, int defensa, int exp) {
