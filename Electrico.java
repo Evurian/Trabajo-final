@@ -9,14 +9,16 @@ public class Electrico extends Pokemon {
 class Pichu extends Electrico {
     public Pichu(int ataque, int vida, int defensa) {
         super("Pichu", "Electrico", ataque, vida, defensa, 0);
-        this.setImagen(new ImageIcon(getClass().getResource("image/pichu.png")));
+        ImageIcon icon = new ImageIcon("image/pichu.png");
+        this.setImagen(icon);
     }
     
 }
 class Elekid extends Electrico{
     public Elekid(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Elekid", "Electrico", ataque, vida, defensa, 0);
-        this.setImagen(new ImageIcon(getClass().getResource("image/elekid.png")));
+        ImageIcon icon = new ImageIcon("image/elekid.png");
+        this.setImagen(icon);
     }
     
 }

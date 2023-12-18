@@ -10,14 +10,16 @@ public class Planta extends Pokemon {
 class Bulbasaur extends Planta {
     public Bulbasaur(int ataque, int vida, int defensa) {
         super("Bulbasaur", "Planta", ataque, vida, defensa, 0);
-        this.setImagen(new ImageIcon(getClass().getResource("image/B.png")));
+        ImageIcon icon = new ImageIcon("image/B.png");
+        this.setImagen(icon);
     }
     
 }
 class Snivy extends Planta{
     public Snivy(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Snivy", "Planta", ataque, vida, defensa, 0);
-        this.setImagen(new ImageIcon(getClass().getResource("image/snivy.png")));
+        ImageIcon icon = new ImageIcon("image/snivy.png");
+        this.setImagen(icon);
 
     }
 }

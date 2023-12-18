@@ -11,15 +11,16 @@ public class Tierra extends Pokemon {
 class Geodude extends Tierra {
     public Geodude(int ataque, int vida, int defensa) {
         super("Geodude", "Tierra", ataque, vida, defensa, 0);
-        this.setImagen(new ImageIcon(getClass().getResource("image/geodude.png")));
-
+        ImageIcon icon = new ImageIcon("image/geodude.png");
+        this.setImagen(icon);
     }
     
 }
 class Rhyhorn extends Tierra{
     public Rhyhorn(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Rhyhorn", "Tierra", ataque, vida, defensa, 0);
-        this.setImagen(new ImageIcon(getClass().getResource("image/rhyhorn.png")));
+        ImageIcon icon = new ImageIcon("image/rhyhorn.png");
+        this.setImagen(icon);
     }
     
 }

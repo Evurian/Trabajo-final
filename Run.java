@@ -1,6 +1,6 @@
 import java.util.*;
 public class Run {
-    public static final int numPokemon=2;
+    public static final int numPokemon=10;
 
     public static void autoEquipo(ArrayList<Pokemon>equipo){
         int random;
