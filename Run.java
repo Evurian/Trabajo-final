@@ -41,7 +41,7 @@ public class Run {
         mostrarEquipo(equipo1);
         System.out.println("EQUIPO 2");
         mostrarEquipo(equipo2);
-        Tablero tablero = new Tablero(equipo1);
+        Tablero tablero = new Tablero(equipo1,equipo2);
         tablero.setVisible(true);
     }    
 }
