@@ -7,21 +7,16 @@ public class Fuego extends Pokemon {
 }
 
 class Charmander extends Fuego {
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/Charmander.png"));
     public Charmander(int ataque, int vida, int defensa) {
         super("Charmander", "Fuego", ataque, vida, defensa, 0);
+        this.setImagen(new ImageIcon(getClass().getResource("image/Charmander.png")));
     }
-    public void setImage(ImageIcon imagen){
-        this.imagen = imagen;
-    }
+    
 }
 class Chimchar extends Fuego{
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/chimchar.png"));
 
     public Chimchar(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Chimchar", "Fuego", ataque, vida, defensa, 0);
-    }
-    public void setImage(ImageIcon imagen){
-        this.imagen = imagen;
+        this.setImagen(new ImageIcon(getClass().getResource("image/chimchar.png")));
     }
 }

@@ -63,6 +63,9 @@ class Pokemon{
     public int getColumna(){
         return columna;
     }
+    public void setImagen(ImageIcon n){
+        imagen = n;
+    }
     public ImageIcon getImagen(){
         return imagen;
     }

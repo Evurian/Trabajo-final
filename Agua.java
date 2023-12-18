@@ -7,20 +7,14 @@ public class Agua extends Pokemon {
 }
 
 class Squirtle extends Agua {
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/squirtle.png"));
     public Squirtle(int ataque, int vida, int defensa) {
         super("Squirtle", "Agua", ataque, vida, defensa, 0);
-    }
-    public void setImage(ImageIcon imagen){
-        this.imagen = imagen;
+        this.setImagen(new ImageIcon(getClass().getResource("image/squirtle.png")));
     }
 }
 class Froakie extends Agua{
-    private ImageIcon imagen = new ImageIcon(getClass().getResource("image/froakie.png"));
     public Froakie(String nombre, int ataque, int vida, int defensa, int exp) {
         super("Froakie", "Agua", ataque, vida, defensa, 0);
-    }
-    public void setImage(ImageIcon imagen){
-        this.imagen = imagen;
+        this.setImagen(new ImageIcon(getClass().getResource("image/froakie.png")));
     }
 }
