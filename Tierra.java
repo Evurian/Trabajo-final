@@ -17,7 +17,7 @@ class Geodude extends Tierra {
     
 }
 class Rhyhorn extends Tierra{
-    public Rhyhorn(String nombre, int ataque, int vida, int defensa, int exp) {
+    public Rhyhorn(int ataque, int vida, int defensa) {
         super("Rhyhorn", "Tierra", ataque, vida, defensa, 0);
         ImageIcon icon = new ImageIcon("image/rhyhorn.png");
         this.setImagen(icon);
