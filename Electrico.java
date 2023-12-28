@@ -15,7 +15,7 @@ class Pichu extends Electrico {
     
 }
 class Elekid extends Electrico{
-    public Elekid(String nombre, int ataque, int vida, int defensa, int exp) {
+    public Elekid(int ataque, int vida, int defensa) {
         super("Elekid", "Electrico", ataque, vida, defensa, 0);
         ImageIcon icon = new ImageIcon("image/elekid.png");
         this.setImagen(icon);

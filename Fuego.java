@@ -16,7 +16,7 @@ class Charmander extends Fuego {
 }
 class Chimchar extends Fuego{
 
-    public Chimchar(String nombre, int ataque, int vida, int defensa, int exp) {
+    public Chimchar(int ataque, int vida, int defensa) {
         super("Chimchar", "Fuego", ataque, vida, defensa, 0);
         ImageIcon icon = new ImageIcon("image/chimchar.png");
         this.setImagen(icon);

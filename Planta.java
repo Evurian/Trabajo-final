@@ -16,7 +16,7 @@ class Bulbasaur extends Planta {
     
 }
 class Snivy extends Planta{
-    public Snivy(String nombre, int ataque, int vida, int defensa, int exp) {
+    public Snivy(int ataque, int vida, int defensa) {
         super("Snivy", "Planta", ataque, vida, defensa, 0);
         ImageIcon icon = new ImageIcon("image/snivy.png");
         this.setImagen(icon);
