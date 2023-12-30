@@ -22,13 +22,15 @@ public class Tablero extends JFrame {
                 add(celdas[i][j]);
             }
         }
-
-        ubicarPokemonsEnTablero(equipo, celdas,Color.RED);
-        ubicarPokemonsEnTablero(equipo2, celdas, Color.BLUE);
+        ArrayList<Pokemon>equipos=equipo;
+        for (int i=0;i<equipo2.size();i++){
+            equipos.add(equipo2.get(i));
+        }
+        ubicarPokemonsEnTablero(equipos, celdas,Color.RED, Color.BLUE);
         setVisible(true);
     }
 
-    private void ubicarPokemonsEnTablero(ArrayList<Pokemon> equipo, JPanel[][] celdas,Color color) {
+    private void ubicarPokemonsEnTablero(ArrayList<Pokemon> equipo, JPanel[][] celdas,Color color, Color color2) {
         ArrayList<Integer> posiciones = new ArrayList<>();
         for (int i = 0; i < FILAS * COLUMNAS; i++) {
             posiciones.add(i);
@@ -46,7 +48,12 @@ public class Tablero extends JFrame {
 
             JLabel label = new JLabel(pokemon.getImagen());
             label.setHorizontalAlignment(SwingConstants.CENTER);
-            celdas[fila][columna].setBorder(BorderFactory.createLineBorder(color));
+            if(pokemon.getEquipo()){
+                celdas[fila][columna].setBorder(BorderFactory.createLineBorder(color));
+            }
+            else{
+                celdas[fila][columna].setBorder(BorderFactory.createLineBorder(color2));
+            }
             celdas[fila][columna].add(label);
 
             index++;

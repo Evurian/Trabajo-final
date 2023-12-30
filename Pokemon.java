@@ -5,15 +5,17 @@ class Pokemon{
     private int ataque, vida, defensa, exp;
     private ImageIcon imagen;
     private int fila, columna;
+    private boolean equipo;
     
     
-    public Pokemon(String nombre, String tipo, int ataque, int vida, int defensa, int exp) {
+    public Pokemon(String nombre, String tipo, int ataque, int vida, int defensa, int exp, boolean eqp) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.ataque = ataque;
         this.vida = vida;
         this.defensa = defensa;
         this.exp = exp;
+        this.equipo=eqp;
     }
     
     public void setNombre(String n){
@@ -68,5 +70,11 @@ class Pokemon{
     }
     public ImageIcon getImagen(){
         return imagen;
+    }
+    public void setEquipo(boolean eqp){
+        equipo=eqp;
+    }
+    public boolean getEquipo(){
+        return equipo;
     }
 }
