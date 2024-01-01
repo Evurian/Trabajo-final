@@ -10,16 +10,31 @@ public class Run {
     public static final int maxVid=10;
 
     public static void autoEquipo(ArrayList<Pokemon>equipo, boolean eqp){
-        ArrayList<Integer> posiciones = new ArrayList<>();
-        for (int i = 0; i < 10 * 10; i++) {
-            posiciones.add(i);
-        }
-        Collections.shuffle(posiciones);
-        int index = 0;
+        ArrayList<Integer> posicionesEquipo1 = new ArrayList<>();
+        ArrayList<Integer> posicionesEquipo2 = new ArrayList<>();
         
-
+        for (int i = 0; i < 10 * 10; i++) {
+            if (eqp) {
+                posicionesEquipo1.add(i);
+            } else {
+                posicionesEquipo2.add(i);
+            }
+        }
+        
+        Collections.shuffle(posicionesEquipo1);
+        Collections.shuffle(posicionesEquipo2);
+        
+        int index = 0;
         int random, randomAtq, randomDef, randomVid;
         Pokemon parcial;
+        
+        ArrayList<Integer> posiciones;
+        if (eqp) {
+            posiciones = posicionesEquipo1;
+        } else {
+            posiciones = posicionesEquipo2;
+        }
+
         for(int i=0;i<Run.numPokemon;i++){
             random=(int)(Math.random()*10)+1;
             randomAtq=(int)(Math.random()*Run.maxAtq)+1;
