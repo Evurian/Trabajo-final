@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class GamePanel extends JPanel implements Runnable{
     
-    public static final int WIDTH = 500;
+    public static final int WIDTH = 700;
     public static final int HEIGHT = 500;
     final int FPS = 60;
     Thread gameThread;
@@ -149,6 +149,15 @@ public class GamePanel extends JPanel implements Runnable{
             }
             
             activeP.draw(a2);
+        }
+        a2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        a2.setFont(new Font("Book Antiqua", Font.PLAIN, 30));
+        a2.setColor(Color.white);
+
+        if(currentColor == WHITE){
+            a2.drawString("Turno Rojo", 520, 200);
+        }else {
+            a2.drawString("Turno Azul", 520, 300);
         }
     }
     
