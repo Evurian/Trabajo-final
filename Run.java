@@ -124,16 +124,6 @@ public class Run {
         System.out.println("EQUIPO 2");
         mostrarEquipo(equipo2);
 
-        JFrame window = new JFrame("Tablero");
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setResizable(false);
-        GamePanel tablero = new GamePanel(equipo1,equipo2);
-        window.add(tablero);
-        window.pack();
-
-        window.setLocationRelativeTo(null);
-        window.setVisible(true);
-
-        tablero.launchGame();
+        Screen sc = new Screen(equipo1,equipo2);
     }    
 }
