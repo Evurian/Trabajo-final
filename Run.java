@@ -4,12 +4,25 @@ import java.util.*;
 import javax.swing.JFrame;
 public class Run {
 
-    public static final int numPokemon=10;
+    public static final int numPokemon=1;
     public static final int maxAtq=10;
     public static final int maxDef=10;
     public static final int maxVid=10;
-
+    public static int elegirOpcion(String[]listaOpciones){
+        Scanner scan=new Scanner(System.in);
+        int i;
+        do{
+            System.out.println("Eliga uno de los opciones a continuación, ingrese el número entre 1 y "+listaOpciones.length+" según corresponda:");
+            for(int j=0;j<listaOpciones.length;j++){
+                System.out.println((j+1)+". "+listaOpciones[j]);
+            }
+            i=scan.nextInt();
+        }
+        while(i<1||i>listaOpciones.length);
+        return (i-1);
+    }
     public static void autoEquipo(ArrayList<Pokemon>equipo, boolean eqp){
+        Scanner scan=new Scanner(System.in);
         ArrayList<Integer> posicionesEquipo1 = new ArrayList<>();
         ArrayList<Integer> posicionesEquipo2 = new ArrayList<>();
         
@@ -23,7 +36,8 @@ public class Run {
         
         Collections.shuffle(posicionesEquipo1);
         Collections.shuffle(posicionesEquipo2);
-        
+        System.out.println("Elegir sistema de elección del equipo pokemón, ingrese 0 para automático y 1 para manual, de elegir manual debera elegir entre las opciones hasta llegar a los "+Run.numPokemon+" pokemones...");
+        int control=scan.nextInt();
         int index = 0;
         int random, randomAtq, randomDef, randomVid;
         Pokemon parcial;
@@ -35,8 +49,15 @@ public class Run {
             posiciones = posicionesEquipo2;
         }
 
+        String[]opciones={"Squirtle","Charmander","Pichu","Geodude","Bulbasaur","Froakie","Chimchar","Elekid","Rhyhorn","Snivy"};
         for(int i=0;i<Run.numPokemon;i++){
-            random=(int)(Math.random()*10)+1;
+            if(control==0){
+                random=(int)(Math.random()*10)+1;
+            }
+            else{
+
+                random=elegirOpcion(opciones)+1;
+            }
             randomAtq=(int)(Math.random()*Run.maxAtq)+1;
             randomDef=(int)(Math.random()*Run.maxDef)+1;
             randomVid=(int)(Math.random()*Run.maxVid)+1;
@@ -85,6 +106,7 @@ public class Run {
             index++;
         }
     }
+
     public static void mostrarEquipo(ArrayList<Pokemon>equipo){
         for(int i=0;i<equipo.size();i++){
             System.out.println("Nombre: "+equipo.get(i).getNombre()+"\tVida: "+equipo.get(i).getVida()+"\tAtaque: "+equipo.get(i).getAtaque()+"\tDefensa: "+equipo.get(i).getDefensa());
@@ -93,7 +115,9 @@ public class Run {
     public static void main(String[] args) {
         ArrayList<Pokemon>equipo1=new ArrayList<>();
         ArrayList<Pokemon>equipo2=new ArrayList<>();
+        System.out.println("Es turno de elegir del jugador 1...");
         autoEquipo(equipo1, true);
+        System.out.println("Es turno de elegir del jugador 2...");
         autoEquipo(equipo2, false);
         System.out.println("EQUIPO 1");
         mostrarEquipo(equipo1);

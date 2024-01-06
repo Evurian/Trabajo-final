@@ -106,12 +106,37 @@ class Pokemon{
         }
         return null;
     }
+    public int typeBenefit(Pokemon pokemon1, Pokemon pokemon2){
+        String[]beneficio={"AF", "FP", "PA", "EA", "TF", "TE"};
+        String[]perjuicio={"FA", "PF", "AP", "AE", "FT", "ET"};
+        String key=pokemon1.getTipo().substring(0,1)+pokemon2.getTipo().substring(0,1);
+        for(String k:beneficio){
+            if(k.equals(key)){
+                System.out.println("NOTIFICACION: VENTAJA DE TIPO AL INTENTAR ATACAR A "+pokemon2.getNombre());
+                return 5;
+            }
+        }
+        for(String k:perjuicio){
+            if(k.equals(key)){
+                System.out.println("NOTIFICACION: DESVENTAJA DE TIPO AL INTENTAR ATACAR A "+pokemon2.getNombre());
+                return -5;
+            }
+        }
+        return 0;
+    }
+    public boolean motionChecker(Pokemon pokemon1, Pokemon pokemon2){
+        
+        if((pokemon1.getVida()>pokemon2.getVida()&&(pokemon1.getAtaque()+typeBenefit(pokemon1, pokemon2)+3)>=pokemon2.getDefensa())||((pokemon1.getAtaque()+typeBenefit(pokemon1, pokemon2))>=pokemon2.getDefensa())){
+            return true;
+        }
+        return false;
+    }
     public boolean isVaildSquare(int targetCol,int targetRow){
         hittingP = getHittingP(targetCol, targetRow);
         if(hittingP == null){
             return true;
         } else{
-            if(hittingP.equipo != this.equipo && hittingP.getVida() > this.getVida()){
+            if(hittingP.equipo != this.equipo && motionChecker(this, hittingP)){
                 return true;
             } else {
                 hittingP = null;
