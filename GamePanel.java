@@ -155,9 +155,9 @@ public class GamePanel extends JPanel implements Runnable{
         a2.setColor(Color.white);
 
         if(currentColor == WHITE){
-            a2.drawString("Turno Rojo", 520, 200);
+            a2.drawString("Turno Azul", 520, 200);
         }else {
-            a2.drawString("Turno Azul", 520, 300);
+            a2.drawString("Turno Rojo", 520, 300);
         }
     }
     

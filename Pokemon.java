@@ -84,7 +84,7 @@ class Pokemon{
     }
     public boolean canMove(int targetCol, int targetRow){
         if(isWithinBoard(targetCol, targetRow)){
-            if(Math.abs(targetCol - preCol) + Math.abs(targetRow - preRow) == 1 || Math.abs(targetCol - preCol) * Math.abs(targetRow - preRow) == 1){
+            if(Math.abs(targetCol - preCol) + Math.abs(targetRow - preRow) <= 20 || Math.abs(targetCol - preCol) * Math.abs(targetRow - preRow) <= 20){
                 if(isVaildSquare(targetCol, targetRow)){
                     return true;
                 }
@@ -111,7 +111,7 @@ class Pokemon{
         if(hittingP == null){
             return true;
         } else{
-            if(hittingP.equipo != this.equipo){
+            if(hittingP.equipo != this.equipo && hittingP.getVida() > this.getVida()){
                 return true;
             } else {
                 hittingP = null;
